@@ -101,25 +101,27 @@ document.getElementById("reset").addEventListener('click', () => {
 
 
 // theme
-var isLightThem = true;
+var isLightTheme = true;
 var r = document.querySelector(':root');
 document.getElementById('theme-icon').addEventListener('click', () => {
-    if (isLightThem) {
+    console.log(isLightTheme);
+    if (isLightTheme) {
         darkTheme();
     } else {
         lightTheme();
     }
 });
 function darkTheme() {
-    r.style.setProperty('--primary-color', '#57CC99');
-    r.style.setProperty('--secondary-color', '#C7F9CC');
-    r.style.setProperty('--selected-button', '#38A3A5');
-    isLightThem = false;
-}
-
-function lightTheme() {
     r.style.setProperty('--primary-color', '#041C32');
     r.style.setProperty('--secondary-color', '#064663');
     r.style.setProperty('--selected-button', '#04293A');
-    isLightThem = true;
+    isLightTheme = false;
+}
+
+function lightTheme() {
+    r.style.setProperty('--primary-color', '#57CC99');
+    r.style.setProperty('--secondary-color', '#C7F9CC');
+    r.style.setProperty('--selected-button', '#38A3A5');
+    
+    isLightTheme = true;
 }
